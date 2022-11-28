@@ -13,13 +13,13 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name ="seleccion")
+@Table(name="seleccion")
 public class Seleccion {
     
     @Id
-	@SequenceGenerator(name="categoria_id_seq", allocationSize=1)
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="categoria_id_seq")
-	private Integer serial;
+	@SequenceGenerator(name="seleccion_id_seq", allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seleccion_id_seq")
+	private Integer id;
 
     private String nombre;
 
@@ -27,5 +27,5 @@ public class Seleccion {
     @JoinColumn(name="continente_id")
     private Continente continente;
 
-    private Character grupo;
+    private String grupo;
 }

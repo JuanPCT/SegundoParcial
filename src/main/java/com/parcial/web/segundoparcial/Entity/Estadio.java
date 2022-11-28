@@ -17,7 +17,7 @@ public class Estadio {
     @Id
 	@SequenceGenerator(name="categoria_id_seq", allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="categoria_id_seq")
-    private Integer serial;
+    private Integer id;
 
     private String nombre;
     private Integer capacidad;
