@@ -2,6 +2,9 @@ package com.parcial.web.segundoparcial.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,8 +22,9 @@ public class Resultado {
     @Id
 	@SequenceGenerator(name="categoria_id_seq", allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="categoria_id_seq")
-    private Integer serial;
+    private Integer id;
 
+    @JsonIgnore
     @ManyToOne
 	@JoinColumn(name="partido_id")
     private Partido partido;
