@@ -2,6 +2,8 @@ package com.parcial.web.segundoparcial.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EstadioRepository extends JpaRepository<EstadioRepository,Integer> {
+import com.parcial.web.segundoparcial.Entity.Estadio;
+
+public interface EstadioRepository extends JpaRepository<Estadio,Integer> {
     
 }
